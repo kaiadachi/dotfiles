@@ -1,0 +1,10 @@
+automake
+direnv
+git
+go
+mysql
+peco
+tmux
+wget
+fish
+nano
