@@ -1,28 +1,28 @@
-## First Settings
+# First Settings
 
-# packages, applications initialize
+## packages, applications initialize
 $ bash bin/brew-init.sh # brew
 
-# dotfiles, plugins initialize
+## dotfiles, plugins initialize
 $ make
 
 
-## Update
+# Update
 
-# if you add some applications or packages
+## if you add some applications or packages
 $ bash bin/brew-init.sh # packages, applications initialize
 
-# if you add some dotfiles or plugins
+## if you add some dotfiles or plugins
 $ make
 
-# if you change to write some dotfiles
+## if you change to write some dotfiles
 $ make update
 
-## Clean
+# Clean
 
-# if you clean up your env
+## if you clean up your env
 $ make clean
 
-## Reference
+# Reference
 https://github.com/bto/dotfiles
 https://github.com/takeokunn/dotfiles
