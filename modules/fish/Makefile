@@ -11,6 +11,9 @@ fish-clean:
 
 .PHONY: fish-install
 fish-install:
+	sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
+	chsh -s /usr/local/bin/fish
+
 	mkdir -p $(FISH_DIR)
 	ln -sf $(SELF_FISH_DIR)/config.fish $(FISH_DIR)/config.fish
 	ln -sf $(SELF_FISH_DIR)/fish_greeting.fish $(FISH_DIR)/fish_greeting.fish
