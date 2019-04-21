@@ -1,6 +1,5 @@
 #!/bin/bash
 source $(dirname $0)/.init.sh
 
-while read pkg; do
-    brew install $pkg
-done < $PACKAGE_HOMEBREW_DIR/pkgs.txt
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+cd $PACKAGE_HOMEBREW_DIR && brew bundle dump

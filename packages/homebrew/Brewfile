@@ -1,0 +1,22 @@
+# Brewfile
+cask_args appdir: "/Applications"
+
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+cask "alfred"
+cask "atom"
+cask "shiftit"
+
+brew "automake"
+brew "direnv"
+brew "fish"
+brew "git"
+brew "go"
+brew "mysql"
+brew "nano"
+brew "peco"
+brew "tmux"
+brew "wget"
