@@ -1,17 +1,28 @@
-# dotfiles
-* fish
-* git
-* tmux
+## First Settings
 
-## Setup
+# packages, applications initialize
+$ bash bin/brew-init.sh # brew
 
-# brew
-$ bash bin/brew-init.sh # use homebrew
+# dotfiles, plugins initialize
+$ make
 
-# apt
-$ bash bin/apt-init.sh  # use ubuntu
 
-# usage
-$ make # full install
-$ make server # server config install
+## Update
 
+# if you add some applications or packages
+$ bash bin/brew-init.sh # packages, applications initialize
+
+# if you add some dotfiles or plugins
+$ make
+
+# if you change to write some dotfiles
+$ make update
+
+## Clean
+
+# if you clean up your env
+$ make clean
+
+## Reference
+https://github.com/bto/dotfiles
+https://github.com/takeokunn/dotfiles
