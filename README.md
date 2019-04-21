@@ -24,5 +24,5 @@ $ make update
 $ make clean
 
 # Reference
-https://github.com/bto/dotfiles
+https://github.com/bto/dotfiles  
 https://github.com/takeokunn/dotfiles
