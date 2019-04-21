@@ -1,5 +1,5 @@
 .PHONY: all
-all: install
+all: init
 
 TOP_DIR := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 BIN_DIR = $(TOP_DIR)/bin
@@ -8,7 +8,7 @@ MODULE_DIR = $(TOP_DIR)/modules
 SOURCE_DIR = $(TOP_DIR)/src
 
 CLEAN_TARGETS +=
-INSTALL_TARGETS +=
+INITIALIZE_TARGETS +=
 UPDATE_TARGETS +=
 
 -include $(SOURCE_DIR)/make/*.mk
@@ -17,8 +17,8 @@ UPDATE_TARGETS +=
 .PHONY: clean
 clean: $(CLEAN_TARGETS)
 
-.PHONY: install
-install: $(INSTALL_TARGETS)
+.PHONY: init
+init: $(INITIALIZE_TARGETS)
 
 .PHONY: update
 update: $(UPDATE_TARGETS)

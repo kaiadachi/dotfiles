@@ -1,7 +1,7 @@
 DOT_SOURCES = $(wildcard $(MODULE_DIR)/*/dot.*)
 
 CLEAN_TARGETS += dot-clean
-INSTALL_TARGETS += dot-install
+INITIALIZE_TARGETS += dot-init
 
 define dot-rule
 DOT_TARGETS += $1
@@ -23,5 +23,5 @@ $(foreach source, $(DOT_SOURCES), \
 dot-clean:
 	rm -f $(DOT_TARGETS)
 
-.PHONY: dot-install
-dot-install: $(DOT_TARGETS)
+.PHONY: dot-init
+dot-init: $(DOT_TARGETS)

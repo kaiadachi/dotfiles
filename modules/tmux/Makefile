@@ -2,14 +2,14 @@ TMUX_DIR = ~/.tmux/plugins/tpm
 TMUX_GITHUB_URL = https://github.com/tmux-plugins/tpm
 
 CLEAN_TARGETS += tmux-clean
-INSTALL_TARGETS += tmux-install
+INITIALIZE_TARGETS += tmux-init
 UPDATE_TARGETS += tmux-update
 
 .PHONY: tmux-clean
 tmux-clean:
-	rm -fr $(TMUX_DIR)
+	rm -rf $(TMUX_DIR)
 
-tmux-install: $(TMUX_DIR)
+tmux-init: $(TMUX_DIR)
 
 $(TMUX_DIR):
 	git clone $(TMUX_GITHUB_URL) $(TMUX_DIR)
