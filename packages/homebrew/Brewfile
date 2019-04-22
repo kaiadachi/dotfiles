@@ -9,6 +9,8 @@ tap "homebrew/core"
 cask "alfred"
 cask "atom"
 cask "shiftit"
+cask "evernote"
+cask "karabiner"
 
 brew "automake"
 brew "direnv"
