@@ -10,7 +10,7 @@ cask "alfred"
 cask "atom"
 cask "shiftit"
 cask "evernote"
-cask "karabiner"
+cask "karabiner-elements"
 cask "clipy"
 
 brew "automake"
