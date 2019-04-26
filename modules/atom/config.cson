@@ -1,0 +1,10 @@
+"*":
+  core:
+    telemetryConsent: "no"
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "e4247ec7-e8e6-4039-821e-0e85ce5ca235"
+  welcome:
+    showOnStartup: false
