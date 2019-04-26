@@ -13,7 +13,7 @@ atom-clean:
 atom-init: $(ATOM_DIR)
 
 $(ATOM_DIR):
-
+	mkdir -p $(ATOM_DIR)
 	ln -sf $(SELF_ATOM_DIR)/config.cson $(ATOM_DIR)/config.cson
 	ln -sf $(SELF_ATOM_DIR)/init.coffee $(ATOM_DIR)/init.coffee
 	ln -sf $(SELF_ATOM_DIR)/keymap.cson $(ATOM_DIR)/keymap.cson

@@ -1,7 +1,7 @@
 # Brewfile
 cask_args appdir: "/Applications"
 
-tap "caskroom/cask"
+tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -23,3 +23,4 @@ brew "nano"
 brew "peco"
 brew "tmux"
 brew "wget"
+brew "reattach-to-user-namespace"
