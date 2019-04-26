@@ -4,7 +4,7 @@ Expanding dotfiles, plugins will be by make
   
 Initialize = Do only the first time for installing  
 Update = Change setting or add plugins  
-Clean = Delete Repository  
+Clean = Delete what was born from this repository
 
 # First Settings
 
@@ -21,12 +21,12 @@ $ make
 
 # Update
 
-## you change to write some dotfiles
+## change to write some dotfiles
 $ make update
 
 # Clean
 
-## you clean up your env
+## clean up your env
 $ make clean
 
 # Reference
