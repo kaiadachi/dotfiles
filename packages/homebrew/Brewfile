@@ -11,6 +11,7 @@ cask "atom"
 cask "shiftit"
 cask "evernote"
 cask "karabiner"
+cask "clipy"
 
 brew "automake"
 brew "direnv"

@@ -3,7 +3,7 @@ SELF_FISH_DIR = $(MODULE_DIR)/fish
 
 CLEAN_TARGETS += fish-clean
 INITIALIZE_TARGETS += fish-init
-UPDATE_TARGETS +=
+UPDATE_TARGETS += fish-update
 
 .PHONY: fish-clean
 fish-clean:
@@ -23,3 +23,6 @@ $(FISH_DIR):
 
 .PHONY: fish-update
 fish-update:
+	ln -sf $(SELF_FISH_DIR)/config.fish $(FISH_DIR)/config.fish
+	ln -sf $(SELF_FISH_DIR)/fish_greeting.fish $(FISH_DIR)/fish_greeting.fish
+	ln -sf $(SELF_FISH_DIR)/peco.fish $(FISH_DIR)/peco.fish
