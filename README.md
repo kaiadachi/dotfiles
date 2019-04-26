@@ -1,15 +1,15 @@
 # Policy
-Installing packages, applications for MacOS will be by brew 
-Expanding dotfiles, plugins will be by make 
-
-Initialize = Do only the first time for installing 
-Update = Change setting or add plugins 
-Clean = Delete Repository 
+Installing packages, applications for MacOS will be by brew  
+Expanding dotfiles, plugins will be by make  
+  
+Initialize = Do only the first time for installing  
+Update = Change setting or add plugins  
+Clean = Delete Repository  
 
 # First Settings
 
 ## clone
-git clone git@github.com:kaiadachi/dotfiles.git 
+git clone git@github.com:kaiadachi/dotfiles.git  
 cd dotfiles
 
 ## packages, applications initialize
