@@ -12,7 +12,7 @@ Clean = Delete what was born from this repository
 $ curl -L https://raw.githubusercontent.com/kaiadachi/dotfiles/master/bin/brew-init.sh | bash
 
 ## packages, application initialize
-$ git clone https://github.com/kaiadachi/dotfiles.git
+$ git clone https://github.com/kaiadachi/dotfiles.git  
 $ cd dotfiles  
 $ bash bin/brew-init.sh
 
