@@ -8,8 +8,13 @@ Clean = Delete what was born from this repository
 
 # First Settings
 
-## brew, packages, applications initialize
+## brew install
 $ curl -L https://raw.githubusercontent.com/kaiadachi/dotfiles/master/bin/brew-init.sh | bash
+
+## packages, application initialize
+$ git clone git@github.com:kaiadachi/dotfiles.git
+$ cd dotfiles
+$ bash bin/brew-init.sh
 
 ## dotfiles, plugins initialize
 $ make
