@@ -30,6 +30,3 @@ $ make update
 ## clean up your env
 $ make clean
 
-# Reference
-https://github.com/bto/dotfiles  
-https://github.com/takeokunn/dotfiles
