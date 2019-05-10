@@ -12,6 +12,7 @@ cask "shiftit"
 cask "evernote"
 cask "karabiner-elements"
 cask "clipy"
+cask "cyberduck"
 
 brew "automake"
 brew "direnv"
