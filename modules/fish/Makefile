@@ -20,9 +20,13 @@ $(FISH_DIR):
 	ln -sf $(SELF_FISH_DIR)/config.fish $(FISH_DIR)/config.fish
 	ln -sf $(SELF_FISH_DIR)/fish_greeting.fish $(FISH_DIR)/fish_greeting.fish
 	ln -sf $(SELF_FISH_DIR)/peco.fish $(FISH_DIR)/peco.fish
+	ln -sf $(SELF_FISH_DIR)/gopath.fish $(FISH_DIR)/gopath.fish
+
 
 .PHONY: fish-update
 fish-update:
 	ln -sf $(SELF_FISH_DIR)/config.fish $(FISH_DIR)/config.fish
 	ln -sf $(SELF_FISH_DIR)/fish_greeting.fish $(FISH_DIR)/fish_greeting.fish
 	ln -sf $(SELF_FISH_DIR)/peco.fish $(FISH_DIR)/peco.fish
+	ln -sf $(SELF_FISH_DIR)/gopath.fish $(FISH_DIR)/gopath.fish
+
