@@ -2,9 +2,9 @@
 Installing packages, applications for MacOS will be by brew  
 Expanding dotfiles, plugins will be by make  
   
-Initialize = Do only the first time for installing  
-Update = Change setting or add plugins  
-Clean = Delete what was born from this repository
+Initialize: Do only the first time for installing  
+Update: Change setting or add plugins  
+Clean: Delete what was born from this repository
 
 # First Settings
 
@@ -30,6 +30,3 @@ $ make update
 ## clean up your env
 $ make clean
 
-# Reference
-https://github.com/bto/dotfiles  
-https://github.com/takeokunn/dotfiles
