@@ -13,6 +13,7 @@ cask "evernote"
 cask "karabiner-elements"
 cask "clipy"
 cask "cyberduck"
+cask "google-chrome"
 
 brew "automake"
 brew "direnv"
