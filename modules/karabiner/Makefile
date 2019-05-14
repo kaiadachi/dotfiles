@@ -3,7 +3,7 @@ SELF_KARABINER_DIR = $(MODULE_DIR)/karabiner
 
 CLEAN_TARGETS += karabiner-clean
 INITIALIZE_TARGETS += karabiner-init
-UPDATE_TARGETS += karabiner-update
+
 
 .PHONY: karabiner-clean
 karabiner-clean:
@@ -15,10 +15,5 @@ karabiner-init: $(KARABINER_DIR)
 $(KARABINER_DIR):
 	mkdir -p $(KARABINER_DIR)
 	mkdir -p $(KARABINER_DIR)/assets/complex_modifications/
-	ln -sf $(SELF_KARABINER_DIR)/karabiner.json $(KARABINER_DIR)/karabiner.json
-	ln -sf $(SELF_KARABINER_DIR)/assets/complex_modifications/1554335400.json $(KARABINER_DIR)/assets/complex_modifications/1554335400.json
-
-.PHONY: karabiner-update
-karabiner-update:
 	ln -sf $(SELF_KARABINER_DIR)/karabiner.json $(KARABINER_DIR)/karabiner.json
 	ln -sf $(SELF_KARABINER_DIR)/assets/complex_modifications/1554335400.json $(KARABINER_DIR)/assets/complex_modifications/1554335400.json
