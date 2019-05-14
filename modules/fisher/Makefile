@@ -14,4 +14,4 @@ fisher-init: $(FISHER_DIR)
 $(FISHER_DIR):
 	curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 	mkdir -p $(FISHER_DIR)
-	sh $(BIN_DIR)/fisher-init.sh
+	bash $(BIN_DIR)/fisher-init.sh
