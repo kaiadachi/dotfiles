@@ -1,0 +1,6 @@
+atom-beautify@0.33.4
+atom-file-icons@0.6.0
+auto-encoding@0.7.2
+minimap@4.29.9
+project-manager@3.3.6
+show-ideographic-space@1.0.2
