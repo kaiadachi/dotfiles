@@ -2,8 +2,10 @@
   core:
     telemetryConsent: "no"
   editor:
+    fontSize: 12
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
   "exception-reporting":
     userId: "e4247ec7-e8e6-4039-821e-0e85ce5ca235"
   welcome:
