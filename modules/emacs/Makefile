@@ -10,7 +10,7 @@ emacs-clean:
 	rm -rf $(EMACS_DIR)
 
 .PHONY: emacs-init
-emacs-init: $(emacs_DIR)
+emacs-init: $(EMACS_DIR)
 
 $(EMACS_DIR):
 	mkdir -p $(EMACS_DIR)
@@ -18,8 +18,9 @@ $(EMACS_DIR):
 	ln -sf $(SELF_EMACS_DIR)/init.el $(EMACS_DIR)/
 	ln -sf $(SELF_EMACS_DIR)/Cask $(EMACS_DIR)/
 	ln -sf $(SELF_EMACS_DIR)/config $(EMACS_DIR)/
-	
-	$(EMACS_DIR)/cask install
+
+	cd $(EMACS_DIR)
+	cask install
 
 emacs-update:
 	$(EMACS_DIR)/cask update
