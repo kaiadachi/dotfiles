@@ -1,4 +1,2 @@
-(progn
-    (bind-key "C-z" 'undo)
-    (bind-key "C-h" 'delete-backward-char)
-)
+(define-key global-map (kbd "C-z") 'undo)
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
