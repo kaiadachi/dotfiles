@@ -1,0 +1,14 @@
+(source gnu)
+(source melpa)
+
+(depends-on "cask")
+(depends-on "use-package")
+
+(depends-on "smartparens")
+(depends-on "bind-key")
+(depends-on "magit")
+(depends-on "auto-complete")
+(depends-on "popup")
+(depends-on "helm")
+(depends-on "flycheck")
+(depends-on "undo-tree")
