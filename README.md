@@ -23,5 +23,5 @@ $ make
 ## clean up your env
 $ make clean
 
-## notices
+# notices
 tmux plugin: prefix + I
