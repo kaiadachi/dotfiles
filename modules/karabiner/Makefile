@@ -1,5 +1,6 @@
 KARABINER_DIR = ~/.config/karabiner
-SELF_KARABINER_DIR = $(MODULE_DIR)/karabiner
+# SELF_KARABINER_DIR = $(MODULE_DIR)/karabiner
+SELF_KARABINER_DIR = /Users/kaadachi/dotfiles/modules/karabiner
 
 CLEAN_TARGETS += karabiner-clean
 INITIALIZE_TARGETS += karabiner-init
