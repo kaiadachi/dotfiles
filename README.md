@@ -9,7 +9,8 @@ Clean: Delete what was born from this repository
 # First Settings
 
 ## brew initialize(show Brewfile)
-<!-- $ curl -L https://raw.githubusercontent.com/kaiadachi/dotfiles/master/bin/brew-init.sh | bash -->
+$ curl -L https://raw.githubusercontent.com/kaiadachi/dotfiles/master/bin/brew-init.sh | bash
+or  
 $ git clone https://github.com/kaiadachi/dotfiles.git  
 $ cd dotfiles  
 $ bash bin/brew-init.sh
@@ -21,3 +22,6 @@ $ make
 
 ## clean up your env
 $ make clean
+
+## notices
+tmux plugin: prefix + I
