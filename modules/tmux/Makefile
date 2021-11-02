@@ -1,9 +1,9 @@
 TMUX_DIR = ~/.tmux/plugins/tpm
 TMUX_GITHUB_URL = https://github.com/tmux-plugins/tpm
 
-CLEAN_TARGETS += tmux-clean
-INITIALIZE_TARGETS += tmux-init
-UPDATE_TARGETS += tmux-update
+# CLEAN_TARGETS += tmux-clean
+# INITIALIZE_TARGETS += tmux-init
+# UPDATE_TARGETS += tmux-update
 
 .PHONY: tmux-clean
 tmux-clean:

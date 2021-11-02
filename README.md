@@ -24,4 +24,5 @@ $ make
 $ make clean
 
 # notices
+1101exclude: emacs,tmux
 tmux plugin: prefix + I
