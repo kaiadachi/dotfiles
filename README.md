@@ -16,7 +16,7 @@ $ cd dotfiles
 $ bash bin/brew-init.sh
 
 ## dotfiles, plugins initialize
-$ make
+$ make init
 
 # Clean
 

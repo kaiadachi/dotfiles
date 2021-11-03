@@ -14,7 +14,6 @@ fish-init: $(FISH_DIR)
 $(FISH_DIR):
 	sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 	chsh -s /usr/local/bin/fish
-
 	mkdir -p $(FISH_DIR)
 	ln -sf $(SELF_FISH_DIR)/config.fish $(FISH_DIR)/config.fish
 	ln -sf $(SELF_FISH_DIR)/peco.fish $(FISH_DIR)/peco.fish
