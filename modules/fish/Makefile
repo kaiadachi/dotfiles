@@ -18,3 +18,4 @@ $(FISH_DIR):
 	ln -sf $(SELF_FISH_DIR)/config.fish $(FISH_DIR)/config.fish
 	ln -sf $(SELF_FISH_DIR)/peco.fish $(FISH_DIR)/peco.fish
 	ln -sf $(SELF_FISH_DIR)/gopath.fish $(FISH_DIR)/gopath.fish
+	ln -sf $(SELF_FISH_DIR)/command.fish $(FISH_DIR)/command.fish

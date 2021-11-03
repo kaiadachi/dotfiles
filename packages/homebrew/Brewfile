@@ -14,7 +14,6 @@ cask "cyberduck"
 cask "slack"
 
 brew "automake"
-brew "direnv"
 brew "fish"
 brew "git"
 brew "go"
