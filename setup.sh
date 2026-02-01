@@ -47,7 +47,7 @@ fi
 echo ""
 echo "[2/7] Installing packages from Brewfile..."
 echo ""
-brew bundle install --file="$DOTFILES_DIR/Brewfile" --no-lock --verbose
+brew bundle install --file="$DOTFILES_DIR/Brewfile" --verbose
 echo ""
 echo "  Brewfile installation complete!"
 
