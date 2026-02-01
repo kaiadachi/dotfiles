@@ -66,6 +66,23 @@ if command -v nodenv &> /dev/null; then
     nodenv init - || true
 fi
 
+# 7. Git user設定
+echo ""
+echo "=== Git user config ==="
+if [ ! -f "$HOME/.gitconfig.local" ]; then
+    echo "Setting up git user config..."
+    read -p "Enter your git user name: " git_name
+    read -p "Enter your git email: " git_email
+    cat > "$HOME/.gitconfig.local" << EOF
+[user]
+	name = $git_name
+	email = $git_email
+EOF
+    echo "Created ~/.gitconfig.local"
+else
+    echo "~/.gitconfig.local already exists, skipping"
+fi
+
 echo ""
 echo "=== Setup complete! ==="
 echo "Backup files are stored in: $BACKUP_DIR"

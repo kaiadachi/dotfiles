@@ -1,7 +1,6 @@
-[user]
-	name = kaiadachi
-	email = kai.adachi@up-sider.com
 [pull]
 	rebase = false
 [core]
 	autocrlf = input
+[include]
+	path = ~/.gitconfig.local

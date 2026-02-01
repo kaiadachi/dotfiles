@@ -9,6 +9,7 @@ tmp/*
 
 # Sensitive files
 .config/gh/hosts.yml
+.gitconfig.local
 .zsh_history
 .zsh_sessions/
 
