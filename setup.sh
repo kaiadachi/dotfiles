@@ -42,15 +42,14 @@ else
 fi
 
 # ============================================
-# Step 2: CLI Tools (formulas)
+# Step 2: Install packages from Brewfile
 # ============================================
 echo ""
-echo "[2/7] Installing CLI tools..."
-brew bundle install --file="$DOTFILES_DIR/Brewfile" --no-lock --verbose 2>&1 | while read line; do
-    if [[ "$line" == *"Installing"* ]] || [[ "$line" == *"Using"* ]] || [[ "$line" == *"Skipping"* ]]; then
-        echo "  $line"
-    fi
-done || true
+echo "[2/7] Installing packages from Brewfile..."
+echo ""
+brew bundle install --file="$DOTFILES_DIR/Brewfile" --no-lock --verbose
+echo ""
+echo "  Brewfile installation complete!"
 
 # ============================================
 # Step 3: Shell config files
