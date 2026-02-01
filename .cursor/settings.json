@@ -1,0 +1,16 @@
+{
+    "window.commandCenter": 1,
+    "files.autoSave": "afterDelay",
+    "workbench.editor.revealIfOpen": true,
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "explorer.confirmPasteNative": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "workbench.editorAssociations": {
+        "*.csv": "default"
+    }
+}

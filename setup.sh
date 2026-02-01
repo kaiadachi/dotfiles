@@ -37,7 +37,7 @@ link_file() {
 # ============================================
 # Step 1: Homebrew
 # ============================================
-echo "[1/7] Checking Homebrew..."
+echo "[1/9] Checking Homebrew..."
 if ! command -v brew &> /dev/null; then
     echo "  Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -51,7 +51,7 @@ fi
 # Step 2: Install packages from Brewfile
 # ============================================
 echo ""
-echo "[2/7] Installing packages from Brewfile..."
+echo "[2/9] Installing packages from Brewfile..."
 echo ""
 brew bundle install --file="$DOTFILES_DIR/Brewfile" --verbose
 echo ""
@@ -61,7 +61,7 @@ echo "  Brewfile installation complete!"
 # Step 3: Shell config files
 # ============================================
 echo ""
-echo "[3/7] Linking shell config files..."
+echo "[3/9] Linking shell config files..."
 link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/.zprofile" "$HOME/.zprofile"
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
@@ -70,7 +70,7 @@ link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 # Step 4: .config directory
 # ============================================
 echo ""
-echo "[4/7] Linking .config files..."
+echo "[4/9] Linking .config files..."
 mkdir -p "$HOME/.config/karabiner"
 mkdir -p "$HOME/.config/git"
 mkdir -p "$HOME/.config/gh"
@@ -83,14 +83,32 @@ link_file "$DOTFILES_DIR/.config/gh/config.yml" "$HOME/.config/gh/config.yml"
 # Step 5: Hammerspoon
 # ============================================
 echo ""
-echo "[5/7] Linking Hammerspoon config..."
+echo "[5/9] Linking Hammerspoon config..."
 link_file "$DOTFILES_DIR/.hammerspoon" "$HOME/.hammerspoon"
 
 # ============================================
-# Step 6: nodenv
+# Step 6: Cursor
 # ============================================
 echo ""
-echo "[6/7] Setting up nodenv..."
+echo "[6/9] Linking Cursor config..."
+mkdir -p "$HOME/Library/Application Support/Cursor/User"
+link_file "$DOTFILES_DIR/.cursor/settings.json" "$HOME/Library/Application Support/Cursor/User/settings.json"
+link_file "$DOTFILES_DIR/.cursor/keybindings.json" "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+
+# ============================================
+# Step 7: Antigravity
+# ============================================
+echo ""
+echo "[7/9] Linking Antigravity config..."
+mkdir -p "$HOME/Library/Application Support/Antigravity/User"
+link_file "$DOTFILES_DIR/.antigravity/settings.json" "$HOME/Library/Application Support/Antigravity/User/settings.json"
+link_file "$DOTFILES_DIR/.antigravity/keybindings.json" "$HOME/Library/Application Support/Antigravity/User/keybindings.json"
+
+# ============================================
+# Step 8: nodenv
+# ============================================
+echo ""
+echo "[8/9] Setting up nodenv..."
 if command -v nodenv &> /dev/null; then
     nodenv init - || true
     echo "  Done!"
@@ -99,10 +117,10 @@ else
 fi
 
 # ============================================
-# Step 7: Git user config
+# Step 9: Git user config
 # ============================================
 echo ""
-echo "[7/7] Git user config..."
+echo "[9/9] Git user config..."
 if [ ! -f "$HOME/.gitconfig.local" ]; then
     echo "  Setting up git user config..."
     read -p "  Enter your git user name: " git_name
