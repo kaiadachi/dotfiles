@@ -1,6 +1,5 @@
 # Taps
 tap "bufbuild/buf"
-tap "homebrew/bundle"
 tap "oven-sh/bun"
 
 # CLI Tools
@@ -43,7 +42,7 @@ cask "apidog"
 cask "caffeine"
 cask "chatgpt"
 cask "cursor"
-cask "docker"
+cask "docker-desktop"
 cask "google-chrome"
 cask "google-drive"
 cask "hammerspoon"
