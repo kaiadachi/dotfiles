@@ -4,8 +4,12 @@ set -e
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles_backup/$(date +%Y%m%d_%H%M%S)"
 
-echo "=== Dotfiles Setup ==="
+echo "============================================"
+echo "        Dotfiles Setup Script"
+echo "============================================"
+echo ""
 echo "Dotfiles directory: $DOTFILES_DIR"
+echo ""
 
 # バックアップディレクトリ作成
 mkdir -p "$BACKUP_DIR"
@@ -16,36 +20,52 @@ link_file() {
     local dst="$2"
 
     if [ -e "$dst" ] || [ -L "$dst" ]; then
-        echo "Backing up: $dst -> $BACKUP_DIR/"
+        echo "  Backing up: $dst"
         mv "$dst" "$BACKUP_DIR/"
     fi
 
-    echo "Linking: $src -> $dst"
+    echo "  Linking: $(basename "$src")"
     ln -sf "$src" "$dst"
 }
 
-# 1. Homebrew インストール確認
+# ============================================
+# Step 1: Homebrew
+# ============================================
+echo "[1/7] Checking Homebrew..."
 if ! command -v brew &> /dev/null; then
-    echo "Installing Homebrew..."
+    echo "  Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
+    echo "  Done!"
+else
+    echo "  Homebrew already installed"
 fi
 
-# 2. Brewfile からパッケージインストール
+# ============================================
+# Step 2: CLI Tools (formulas)
+# ============================================
 echo ""
-echo "=== Installing packages from Brewfile ==="
-brew bundle install --file="$DOTFILES_DIR/Brewfile" || true
+echo "[2/7] Installing CLI tools..."
+brew bundle install --file="$DOTFILES_DIR/Brewfile" --no-lock --verbose 2>&1 | while read line; do
+    if [[ "$line" == *"Installing"* ]] || [[ "$line" == *"Using"* ]] || [[ "$line" == *"Skipping"* ]]; then
+        echo "  $line"
+    fi
+done || true
 
-# 3. シェル設定ファイルのリンク
+# ============================================
+# Step 3: Shell config files
+# ============================================
 echo ""
-echo "=== Linking shell config files ==="
+echo "[3/7] Linking shell config files..."
 link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/.zprofile" "$HOME/.zprofile"
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
-# 4. .config ディレクトリの設定
+# ============================================
+# Step 4: .config directory
+# ============================================
 echo ""
-echo "=== Linking .config files ==="
+echo "[4/7] Linking .config files..."
 mkdir -p "$HOME/.config/karabiner"
 mkdir -p "$HOME/.config/git"
 mkdir -p "$HOME/.config/gh"
@@ -54,37 +74,57 @@ link_file "$DOTFILES_DIR/.config/karabiner/karabiner.json" "$HOME/.config/karabi
 link_file "$DOTFILES_DIR/.config/git/ignore" "$HOME/.config/git/ignore"
 link_file "$DOTFILES_DIR/.config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
-# 5. Hammerspoon 設定
+# ============================================
+# Step 5: Hammerspoon
+# ============================================
 echo ""
-echo "=== Linking Hammerspoon config ==="
+echo "[5/7] Linking Hammerspoon config..."
 link_file "$DOTFILES_DIR/.hammerspoon" "$HOME/.hammerspoon"
 
-# 6. nodenv セットアップ
+# ============================================
+# Step 6: nodenv
+# ============================================
+echo ""
+echo "[6/7] Setting up nodenv..."
 if command -v nodenv &> /dev/null; then
-    echo ""
-    echo "=== Setting up nodenv ==="
     nodenv init - || true
+    echo "  Done!"
+else
+    echo "  nodenv not installed, skipping"
 fi
 
-# 7. Git user設定
+# ============================================
+# Step 7: Git user config
+# ============================================
 echo ""
-echo "=== Git user config ==="
+echo "[7/7] Git user config..."
 if [ ! -f "$HOME/.gitconfig.local" ]; then
-    echo "Setting up git user config..."
-    read -p "Enter your git user name: " git_name
-    read -p "Enter your git email: " git_email
+    echo "  Setting up git user config..."
+    read -p "  Enter your git user name: " git_name
+    read -p "  Enter your git email: " git_email
     cat > "$HOME/.gitconfig.local" << EOF
 [user]
 	name = $git_name
 	email = $git_email
 EOF
-    echo "Created ~/.gitconfig.local"
+    echo "  Created ~/.gitconfig.local"
 else
-    echo "~/.gitconfig.local already exists, skipping"
+    echo "  ~/.gitconfig.local already exists, skipping"
 fi
 
+# ============================================
+# Complete!
+# ============================================
 echo ""
-echo "=== Setup complete! ==="
-echo "Backup files are stored in: $BACKUP_DIR"
+echo "============================================"
+echo "        Setup Complete!"
+echo "============================================"
 echo ""
-echo "Please restart your terminal or run: source ~/.zshrc"
+echo "Backup files: $BACKUP_DIR"
+echo ""
+echo "Next steps:"
+echo "  1. Restart terminal or run: source ~/.zshrc"
+echo "  2. Login to apps: 1Password, Chrome, Slack, etc."
+echo "  3. Run: gh auth login"
+echo "  4. Run: gcloud auth login"
+echo ""
