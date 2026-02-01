@@ -1,28 +1,38 @@
-# Policy
-Installing packages, applications for MacOS will be by brew  
-Expanding dotfiles, plugins will be by make  
+# dotfiles
 
-Initialize: Do only the first time for installing  
-Update: Change setting or add plugins  
-Clean: Delete what was born from this repository
+macOS の開発環境セットアップ用 dotfiles
 
-# First Settings
+## 含まれる設定
 
-## brew initialize(show Brewfile)
-$ curl -L https://raw.githubusercontent.com/kaiadachi/dotfiles/master/bin/brew-init.sh | bash  
-or  
-$ git clone https://github.com/kaiadachi/dotfiles.git  
-$ cd dotfiles  
-$ bash bin/brew-init.sh
+- **Brewfile** - アプリケーション・CLIツール一覧
+- **.zshrc / .zprofile** - シェル設定
+- **.gitconfig** - Git設定
+- **.config/karabiner/** - Karabiner-Elements（Cmd単押しで英数/かな切替）
+- **.config/gh/** - GitHub CLI設定
+- **.config/git/ignore** - グローバル gitignore
+- **.hammerspoon/** - ウィンドウ管理（ShiftIt）
 
-## dotfiles, plugins initialize
-$ make init
+## セットアップ
 
-# Clean
+```bash
+git clone https://github.com/kaiadachi/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./setup.sh
+```
 
-## clean up your env
-$ make clean
+## setup.sh が行うこと
 
-# notices
-1101exclude: emacs,tmux
-tmux plugin: prefix + I
+1. Homebrew のインストール（未インストールの場合）
+2. Brewfile からアプリ・CLIツールを一括インストール
+3. 設定ファイルをシンボリックリンクで配置
+4. 既存ファイルは `~/.dotfiles_backup/` に自動バックアップ
+
+## 手動設定が必要なもの
+
+- 1Password: ログイン
+- Google Chrome: ログイン・拡張機能
+- Slack: ワークスペース追加
+- Docker: ログイン
+- JetBrains Toolbox: IDE インストール
+- gh: `gh auth login`
+- gcloud: `gcloud auth login`

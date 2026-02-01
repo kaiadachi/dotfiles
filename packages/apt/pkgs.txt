@@ -1,8 +1,0 @@
-tmux
-build-essential
-git
-mysql
-peco
-fish
-
-

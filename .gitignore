@@ -6,3 +6,15 @@ tmp/*
 !tmp/.gitkeep
 
 **/.cask/*
+
+# Sensitive files
+.config/gh/hosts.yml
+.zsh_history
+.zsh_sessions/
+
+# IDE
+.idea/
+
+# Backups
+*.backup
+*.bak

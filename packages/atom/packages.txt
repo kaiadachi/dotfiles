@@ -1,6 +1,0 @@
-atom-beautify
-atom-file-icons
-auto-encoding
-minimap
-project-manager
-show-ideographic-space
