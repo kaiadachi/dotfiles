@@ -19,6 +19,12 @@ link_file() {
     local src="$1"
     local dst="$2"
 
+    # 既に正しいシンボリックリンクならスキップ
+    if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
+        echo "  Already linked: $(basename "$src")"
+        return
+    fi
+
     if [ -e "$dst" ] || [ -L "$dst" ]; then
         echo "  Backing up: $dst"
         mv "$dst" "$BACKUP_DIR/"
