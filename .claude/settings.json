@@ -47,7 +47,8 @@
       "Bash(head *)",
       "Bash(tail *)",
       "Bash(wc *)",
-      "Bash(dig *)"
+      "Bash(dig *)",
+      "Bash(cd *)"
     ],
     "deny": [
       "Bash(rm -rf *)",

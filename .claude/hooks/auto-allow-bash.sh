@@ -31,7 +31,7 @@ if [[ -z "$BASE_CMD" ]]; then
 fi
 
 # Skip commands that are managed by dedicated tools (not typically in allow list)
-SKIP_CMDS=("cd" "echo" "printf" "true" "false" "test" "[" "[[" "exit" "return" "source" ".")
+SKIP_CMDS=("echo" "printf" "true" "false" "test" "[" "[[" "exit" "return" "source" ".")
 for skip in "${SKIP_CMDS[@]}"; do
   if [[ "$BASE_CMD" == "$skip" ]]; then
     exit 0
