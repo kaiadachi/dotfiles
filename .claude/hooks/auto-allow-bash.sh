@@ -30,14 +30,6 @@ if [[ -z "$BASE_CMD" ]]; then
   exit 0
 fi
 
-# Skip commands that are managed by dedicated tools (not typically in allow list)
-SKIP_CMDS=("echo" "printf" "true" "false" "test" "[" "[[" "exit" "return" "source" ".")
-for skip in "${SKIP_CMDS[@]}"; do
-  if [[ "$BASE_CMD" == "$skip" ]]; then
-    exit 0
-  fi
-done
-
 # Check if already in allow list with wildcard pattern
 PATTERN="Bash(${BASE_CMD} *)"
 PATTERN_EXACT="Bash(${BASE_CMD})"
