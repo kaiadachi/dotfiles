@@ -1,0 +1,57 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/auto-allow-bash.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "WebFetch",
+      "WebSearch",
+      "Bash(git *)",
+      "Bash(npm *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(rm *)",
+      "Bash(chmod *)",
+      "Bash(node *)",
+      "Bash(npx *)",
+      "Bash(bun *)",
+      "Bash(python3 *)",
+      "Bash(pip *)",
+      "Bash(pip3 *)",
+      "Bash(cargo *)",
+      "Bash(go *)",
+      "Bash(find *)",
+      "Bash(curl *)",
+      "Bash(gh *)",
+      "Bash(docker *)",
+      "Bash(brew *)",
+      "Bash(open *)",
+      "Bash(diff *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(dig *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(sudo *)"
+    ]
+  }
+}
