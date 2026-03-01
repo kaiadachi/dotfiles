@@ -33,6 +33,7 @@
       "Bash(pip3 *)",
       "Bash(python3 *)",
       "Bash(rm *)",
+      "Bash(sips *)",
       "Bash(tail *)",
       "Bash(wc *)",
       "Bash(whoami *)",
