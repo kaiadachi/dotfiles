@@ -8,6 +8,9 @@
 5. ユーザーが選択したものだけ `Bash(コマンド名 *)` の形式で `settings.json` の `permissions.allow` に追加する
 6. 追加後、シンボリックリンクを壊さないよう `echo "$CONTENT" > file` で書き込むこと（`mv` は使わない）
 
+7. 追加後、dotfiles リポジトリで変更を commit & push する:
+   - `cd ~/dotfiles && git add .claude/settings.json && git commit -m "Add Bash allow rules via /allow" && git push`
+
 注意:
 - `permissions.deny` に含まれるコマンドは提案しない
 - 追加対象がない場合は「追加するコマンドはありません」と伝える
