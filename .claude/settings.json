@@ -1,54 +1,44 @@
 {
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/auto-allow-bash.sh"
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
-      "Read",
-      "Edit",
-      "Write",
-      "WebFetch",
-      "WebSearch",
-      "Bash(git *)",
-      "Bash(npm *)",
-      "Bash(ls *)",
-      "Bash(cat *)",
-      "Bash(grep *)",
-      "Bash(mkdir *)",
-      "Bash(cp *)",
-      "Bash(mv *)",
-      "Bash(rm *)",
-      "Bash(chmod *)",
-      "Bash(node *)",
-      "Bash(npx *)",
+      "Bash(brew *)",
       "Bash(bun *)",
-      "Bash(python3 *)",
+      "Bash(cargo *)",
+      "Bash(cat *)",
+      "Bash(cd *)",
+      "Bash(chmod *)",
+      "Bash(cp *)",
+      "Bash(curl *)",
+      "Bash(diff *)",
+      "Bash(dig *)",
+      "Bash(docker *)",
+      "Bash(echo *)",
+      "Bash(find *)",
+      "Bash(gh *)",
+      "Bash(git *)",
+      "Bash(go *)",
+      "Bash(grep *)",
+      "Bash(head *)",
+      "Bash(ln *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(mv *)",
+      "Bash(node *)",
+      "Bash(nodenv *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(open *)",
       "Bash(pip *)",
       "Bash(pip3 *)",
-      "Bash(cargo *)",
-      "Bash(go *)",
-      "Bash(find *)",
-      "Bash(curl *)",
-      "Bash(gh *)",
-      "Bash(docker *)",
-      "Bash(brew *)",
-      "Bash(open *)",
-      "Bash(diff *)",
-      "Bash(head *)",
+      "Bash(python3 *)",
+      "Bash(rm *)",
       "Bash(tail *)",
       "Bash(wc *)",
-      "Bash(dig *)",
-      "Bash(cd *)"
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
     ],
     "deny": [
       "Bash(rm -rf *)",
