@@ -111,9 +111,7 @@ EOF
 
 step_claude() {
     echo "[claude] Linking Claude Code config..."
-    mkdir -p "$HOME/.claude/hooks"
     link_file "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
-    link_file "$DOTFILES_DIR/.claude/hooks/auto-allow-bash.sh" "$HOME/.claude/hooks/auto-allow-bash.sh"
 }
 
 # ============================================
