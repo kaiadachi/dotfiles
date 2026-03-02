@@ -39,5 +39,10 @@
       "Bash(git clean -f *)",
       "Bash(chmod 777 *)"
     ]
+  },
+  "model": "opus",
+  "attribution": {
+    "commit": "",
+    "pr": ""
   }
 }
