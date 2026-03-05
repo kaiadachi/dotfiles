@@ -112,6 +112,13 @@ EOF
 step_claude() {
     echo "[claude] Linking Claude Code config..."
     link_file "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
+    mkdir -p "$HOME/.claude/skills"
+    for skill_dir in "$DOTFILES_DIR/.claude/skills"/*/; do
+        [ -d "$skill_dir" ] || continue
+        local skill_name
+        skill_name="$(basename "$skill_dir")"
+        link_file "$skill_dir" "$HOME/.claude/skills/$skill_name"
+    done
 }
 
 # ============================================

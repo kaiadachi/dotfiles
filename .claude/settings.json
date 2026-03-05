@@ -28,7 +28,8 @@
       "mcp__asana__asana_delete_project_status",
       "mcp__asana__asana_set_parent_for_task",
       "mcp__asana__asana_get_tasks_for_tag",
-      "mcp__asana__asana_get_tags_for_workspace"
+      "mcp__asana__asana_get_tags_for_workspace",
+      "mcp__figma-remote-mcp__*"
     ],
     "deny": [
       "Bash(rm -rf *)",
