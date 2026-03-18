@@ -7,11 +7,14 @@
     "allow": [
       "Bash(*)",
       "Edit",
+      "Glob",
+      "Grep",
       "Read",
       "WebFetch",
       "WebSearch",
       "Write",
       "mcp__asana__*",
+      "mcp__figma__*",
       "mcp__figma-remote-mcp__*",
       "mcp__notionApi__*",
       "mcp__linear__*"
