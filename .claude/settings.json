@@ -17,7 +17,8 @@
       "mcp__figma__*",
       "mcp__figma-remote-mcp__*",
       "mcp__notionApi__*",
-      "mcp__linear__*"
+      "mcp__linear__*",
+      "mcp__slack__*"
     ],
     "deny": [
       "Bash(rm -rf *)",
